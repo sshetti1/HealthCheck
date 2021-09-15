@@ -3,7 +3,7 @@ from time import sleep
 from selenium import webdriver
 
 def main(event, context):
-    browser = webdriver.Chrome(executable_path="chromedriver.exe")
+    browser = webdriver.Chrome(executable_path="chromedriver")
     browser.get('http://covidcheck.udel.edu/')
 
 
@@ -13,8 +13,9 @@ def main(event, context):
     studentEmployee.click()
     studentButton = browser.find_element_by_xpath('//*[@id="NextButton"]')
     studentButton.click()
+    browser.close()
 
-    # Username and Password
+    """# Username and Password
     sleep(1)
     username = browser.find_element_by_xpath('//*[@id="udelnetid"]')
     username.send_keys(os.getenv("USERNAME"))
@@ -49,4 +50,4 @@ def main(event, context):
     hoursButton.click()
     sleep(2)
 
-    browser.close()
+    browser.close()"""
