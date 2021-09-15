@@ -2,7 +2,7 @@ import os
 from time import sleep
 from selenium import webdriver
 
-def main():
+def main(event, context):
     browser = webdriver.Chrome(executable_path="/chromedriver.exe")
     browser.get('http://covidcheck.udel.edu/')
 

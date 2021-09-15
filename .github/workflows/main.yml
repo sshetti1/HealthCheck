@@ -9,6 +9,13 @@ jobs:
     - run: python -m pip install --upgrade pip
     - run: mkdir Lambda
     - run: cd Lambda
-    - run: cp HealthCheck.py .
     - run: pip install selenium -t .
     - run: zip -r Lambda.zip .
+    - name: default deploy
+      uses: appleboy/lambda-action@master
+      with:
+        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws_region: ${{ secrets.AWS_REGION }}
+        function_name: UDEL-Health-Check
+        zip_file: Lambda.zip
