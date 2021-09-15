@@ -10,7 +10,7 @@ jobs:
     - run: mkdir Lambda
     - run: cd Lambda
     - run: pip install selenium -t .
-    - run: zip -r Lambda.zip .
+    - run: zip -r Lambda.zip *
     - name: default deploy
       uses: appleboy/lambda-action@master
       with:
