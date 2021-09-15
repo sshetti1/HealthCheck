@@ -46,5 +46,7 @@ def main(event, context):
     none24 = browser.find_element_by_xpath('//*[@id="QID6-5-label"]/span')
     none24.click()
     hoursButton = browser.find_element_by_xpath('//*[@id="NextButton"]')
+    hoursButton.click()
+    sleep(2)
 
     browser.close()
