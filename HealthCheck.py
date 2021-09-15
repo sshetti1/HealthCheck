@@ -27,3 +27,24 @@ def main(event, context):
     sleep(1)
     welcomeButton = browser.find_element_by_xpath('//*[@id="NextButton"]')
     welcomeButton.click()
+
+    # Skip Phone Number
+    sleep(2)
+    phoneButton = browser.find_element_by_xpath('//*[@id="NextButton"]')
+    phoneButton.click()
+
+    # Past 2 Weeks
+    sleep(2)
+    none2Weeks = browser.find_element_by_xpath('//*[@id="QID4-5-label"]')
+    none2Weeks.click()
+    sleep(1)
+    weeksButton = browser.find_element_by_xpath('//*[@id="NextButton"]')
+    weeksButton.click()
+
+    # 24 Hours
+    sleep(2)
+    none24 = browser.find_element_by_xpath('//*[@id="QID6-5-label"]/span')
+    none24.click()
+    hoursButton = browser.find_element_by_xpath('//*[@id="NextButton"]')
+
+    browser.close()
