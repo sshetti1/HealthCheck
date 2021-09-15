@@ -5,7 +5,7 @@ from selenium import webdriver
 def main(event, context):
     chrome_options = webdriver.ChromeOptions()
     chrome_options.binary_location = "/opt/bin/chromedriver"
-    browser = webdriver.Chrome(executable_path="opt/bin/chromedriver", options=chrome_options)
+    browser = webdriver.Chrome(executable_path="chromedriver", options=chrome_options)
     browser.get('http://covidcheck.udel.edu/')
 
 
