@@ -7,8 +7,6 @@ jobs:
     - uses: actions/checkout@v2
     - run: sudo apt-get install zip
     - run: python -m pip install --upgrade pip
-    - run: mkdir Lambda
-    - run: cd Lambda
     - run: pip install selenium -t .
     - run: zip -r Lambda.zip .
     - name: default deploy
