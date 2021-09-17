@@ -1,10 +1,11 @@
 import json
 import os
+from time import sleep
+
 import HealthCheck
 
 
 def lambda_handler(event, context):
-    os.system('export PATH="$/bin:$PATH"')
     HealthCheck.main()
     status = "Done"
     return {

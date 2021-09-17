@@ -4,7 +4,7 @@ from selenium import webdriver
 
 
 def main():
-    browser = webdriver.Chrome(executable_path="bin/chromedriver")
+    browser = webdriver.Chrome()
     browser.get('http://covidcheck.udel.edu/')
 
 

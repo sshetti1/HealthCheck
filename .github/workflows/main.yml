@@ -8,9 +8,7 @@ jobs:
     - run: sudo apt-get install zip
     - run: python -m pip install --upgrade pip
     - run: mkdir bin
-    - run: cd bin
-    - run: sudo apt-get install chromium-browser
-    - run: cd ..
+    - run: mv chromedriver bin
     - run: pip install selenium -t .
     - run: zip -r Lambda.zip . bin
     - name: default deploy
