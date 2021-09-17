@@ -9,7 +9,7 @@ jobs:
     - run: python -m pip install --upgrade pip
     - run: mkdir bin
     - run: cd bin
-    - run: apt-get install chromium-browser
+    - run: sudo apt-get install chromium-browser
     - run: cd ..
     - run: pip install selenium -t .
     - run: zip -r Lambda.zip . bin
