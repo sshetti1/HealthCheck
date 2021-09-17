@@ -7,8 +7,12 @@ jobs:
     - uses: actions/checkout@v2
     - run: sudo apt-get install zip
     - run: python -m pip install --upgrade pip
-    - run: mkdir bin
-    - run: cp chromedriver bin
+    - run: mkdir lambda
+    - run: mkdir lambda/bin
+    - run: cp chromedriver lambda/bin
+    - run: cp HealthCheck.py lambda
+    - run: cp lambda_function.py lambda
+    - run: cd lambda
     - run: pip install selenium -t .
     - run: zip -r Lambda.zip . bin
     - name: default deploy
