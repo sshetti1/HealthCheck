@@ -13,6 +13,6 @@ def lambda_handler(event, context):
             "Content-Type": "application/json"
         },
         "body": json.dumps({
-            "Health Check ": status
+            "Health Check for " + os.getenv('USERNAME'): status
         })
     }
