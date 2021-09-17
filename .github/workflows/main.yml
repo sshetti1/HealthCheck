@@ -8,11 +8,12 @@ jobs:
     - run: sudo apt-get install zip
     - run: python -m pip install --upgrade pip
     - run: mkdir lambda
-    - run: mkdir lambda/bin
-    - run: cp chromedriver lambda/bin
+    - run: cp chromedriver lambda
     - run: cp HealthCheck.py lambda
     - run: cp lambda_function.py lambda
     - run: cd lambda
+    - run: mkdir bin
+    - run: mv chromedriver bin
     - run: pip install selenium -t .
     - run: zip -r Lambda.zip . bin
     - name: default deploy
