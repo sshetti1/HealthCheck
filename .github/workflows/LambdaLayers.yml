@@ -44,7 +44,7 @@ jobs:
       - name: install_chrome_zip_dependencies
         run: |
           echo "Installing and zipping dependencies..."
-          mkdir -p chromedriver
+          mkdir -p chromedriverDependencies
           cd chromedriver
           curl -SL https://chromedriver.storage.googleapis.com/2.37/chromedriver_linux64.zip > chromedriver.zip
           unzip chromedriver.zip
