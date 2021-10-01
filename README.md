@@ -12,7 +12,7 @@ automatically fill out the form for you.
 
 
 ## Using AWS Lambda
-This program can also be used with AWS Lambda. The file [main.yml](.github/workflows/main.yml) creates a zip and pushes 
+This program can also be used with AWS Lambda. The workflow file creates a zip and pushes 
 the zip into a preconfigured AWS Lambda machine. This can be configured for anybody else if they create a Lambda 
 themselves. To make it functional the following steps need to be followed:
  - Create an AWS Lambda
@@ -21,6 +21,6 @@ themselves. To make it functional the following steps need to be followed:
  - Set up the following GitHub repository secrets with those keys:
    - AWS_ACCESS_KEY_ID
    - AWS_SECRET_ACCESS_KEY
- - Change the function name in [main.yml](.github/workflows/main.yml) to the name of the Lambda that you created
+ - Change the function name in workflow file to the name of the Lambda that you created
 
 After those steps have been followed, it is up to you on how you use the Lambda.
