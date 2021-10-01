@@ -11,8 +11,8 @@ To use the program, all you need to do is run the python file [HealthCheck.py](H
 automatically fill out the form for you.
 
 
-## Using AWS Lambda
-This program can also be used with AWS Lambda. The workflow file creates a zip and pushes 
+## Using AWS Lambda (This is currently not working, but a fix is in progress)
+This program can also be used with AWS Lambda. The file [main.yml](.github/workflows/main.yml) creates a zip and pushes
 the zip into a preconfigured AWS Lambda machine. This can be configured for anybody else if they create a Lambda 
 themselves. To make it functional the following steps need to be followed:
  - Create an AWS Lambda
