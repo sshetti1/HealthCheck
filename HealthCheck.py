@@ -11,20 +11,10 @@ def main():
     options.add_argument('--no-sandbox')
     options.add_argument('--single-process')
     options.add_argument('--disable-dev-shm-usage')
-    browser = webdriver.Chrome('/opt/chromedriver', chrome_options=options)
+    browser = webdriver.Chrome(executable_path='/opt/chromedriver', chrome_options=options)
 
-    browser.get('https://www.google.com/')
 
-    browser.close()
-    browser.quit()
-
-    response = {
-        "statusCode": 200,
-        "body": "Selenium Headless Chrome Initialized"
-    }
-
-    return response
-"""    browser.get('http://covidcheck.udel.edu/')
+    browser.get('http://covidcheck.udel.edu/')
 
 
     # Click Student/Employee amd ->
@@ -69,4 +59,4 @@ def main():
     hoursButton.click()
     sleep(2)
 
-    browser.close()"""
+    browser.close()
