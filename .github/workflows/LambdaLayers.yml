@@ -9,7 +9,7 @@ env:
   AWS_DEFAULT_REGION: ${{ secrets.AWS_REGION }}
   LAMBDA_FUNCTION_NAME: UDEL-Health-Check
   LAMBDA_LAYER_NAME1: Selenium
-  LAMBDA_LAYER_NAME2: Chrome
+  LAMBDA_LAYER_NAME2: Chromedriver
   LAMBDA_RUNTIME: python3.9
 
 jobs:
@@ -56,7 +56,7 @@ jobs:
           zip -r chromedriver.zip chromedriver headless-chromium
       - name: publish_dependencies_as_chrome_layer
         run: |
-          echo "Publishing dependencies as selenium layer..."
+          echo "Publishing dependencies as chrome layer..."
           result=$(aws lambda publish-layer-version --layer-name "${LAMBDA_LAYER_NAME2}" --zip-file fileb://chromedriver.zip)
           echo $result
           LAYER_VERSION_ARN=$(jq '.LayerVersionArn' <<< "$result")
