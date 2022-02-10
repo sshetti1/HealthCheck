@@ -1,17 +1,10 @@
 import os
 from time import sleep
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 
 
 def main():
-    options = Options()
-    options.binary_location = '/opt/headless-chromium'
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--single-process')
-    options.add_argument('--disable-dev-shm-usage')
-    browser = webdriver.Chrome(executable_path='/opt/chromedriver', chrome_options=options)
+    browser = webdriver.Chrome(executable_path='chromedriver')
 
 
     browser.get('http://covidcheck.udel.edu/')
