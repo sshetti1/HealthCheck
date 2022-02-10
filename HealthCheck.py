@@ -1,9 +1,18 @@
 import os
 from time import sleep
 from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 
 def main():
+    options = webdriver.ChromeOptions()
+    options.add_argument("start-maximized")
+    options.add_argument("disable-infobars")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-gpu")
+    options.add_argument("start-maximized")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--no-sandbox")
     browser = webdriver.Chrome(executable_path='chromedriver')
 
 
