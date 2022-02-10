@@ -13,7 +13,7 @@ def main():
     options.add_argument("start-maximized")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument("--no-sandbox")
-    browser = webdriver.Chrome(executable_path='chromedriver')
+    browser = webdriver.Chrome(options=options, executable_path='chromedriver')
 
 
     browser.get('http://covidcheck.udel.edu/')
