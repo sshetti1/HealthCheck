@@ -12,6 +12,8 @@ def main():
 
     # Click Student/Employee amd ->
     sleep(1)
+    print("Entered Chrome")
+    return
     studentEmployee = browser.find_element_by_xpath('//*[@id="QID32-4-label"]')
     studentEmployee.click()
     studentButton = browser.find_element_by_xpath('//*[@id="NextButton"]')
@@ -53,3 +55,6 @@ def main():
     sleep(2)
 
     browser.close()
+
+
+main()
