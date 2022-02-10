@@ -1,8 +1,9 @@
 name: Health Check
 
 on:
-  schedule:
-    - cron: "57 11 * * *"
+  push:
+    branches:
+      - master
 
 jobs:
   build:
