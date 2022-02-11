@@ -4,7 +4,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
 
-def main():
+def HealthCheck():
     options = webdriver.ChromeOptions()
     options.add_argument("start-maximized")
     options.add_argument("disable-infobars")
@@ -66,4 +66,4 @@ def main():
     browser.close()
 
 
-main()
+HealthCheck()
