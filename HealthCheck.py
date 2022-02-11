@@ -5,16 +5,11 @@ from selenium.webdriver.chrome.options import Options
 
 
 def HealthCheck():
-    options = webdriver.ChromeOptions()
-    options.add_argument("start-maximized")
-    options.add_argument("disable-infobars")
-    options.add_argument("--disable-extensions")
-    options.add_argument("--disable-gpu")
-    options.add_argument("start-maximized")
-    options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--no-sandbox")
-    browser = webdriver.Chrome(options=options, executable_path='chromedriver')
-
+    chrome_options = Options()
+    chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--no-sandbox')
+    chrome_options.add_argument('--disable-dev-shm-usage')
+    browser = webdriver.Chrome('chromedriver', chrome_options=chrome_options)
 
     browser.get('http://covidcheck.udel.edu/')
 
