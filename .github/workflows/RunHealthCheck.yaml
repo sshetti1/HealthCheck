@@ -1,8 +1,7 @@
 name: Python package
 on:
-  push:
-    branches:
-      - master
+  schedule:
+    - cron: '30 8 * * *'
 
 env:
   USERNAME: ${{ secrets.USERNAME }}
