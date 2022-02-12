@@ -56,7 +56,7 @@ been created, the health check should run at the time scheduled in the [actions 
 
 ![Schedule](resources/CRON.PNG)
 
-This is the currently scheduled time: 8:30 UTC or 3:30 EST. If you would like to change the time, you may change the time
+This is the currently scheduled time: 8:30 UTC or 3:30 AM EST. If you would like to change the time, you may change the time
 in [RunHealthCheck.yaml](.github/workflows/RunHealthCheck.yaml). To understand the CRON format, look at this 
 [page](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule).
 
@@ -64,6 +64,7 @@ in [RunHealthCheck.yaml](.github/workflows/RunHealthCheck.yaml). To understand t
  - As stated before, this only completes the health check and generates a green check mark. **DO NOT ABUSE THIS!** Once you
 have forked/cloned this repository, it is your responsibility to use it correctly and safely. If you know that you have 
 COVID-19, or have come in close contact with somebody that has had COVID-19, please remove the schedule line from 
-[RunHealthCheck.yaml](.github/workflows/RunHealthCheck.yaml). If you do not turn the scheduler off and you generate
-the green check, please contact the [University of Delaware's COVID-19 Division](coronavirus@udel.edu).
+[RunHealthCheck.yaml](.github/workflows/RunHealthCheck.yaml). If you do not know how to do this, please ask somebody who does. 
+If you do not turn the scheduler off and you generate the green check, please contact the 
+[University of Delaware's COVID-19 Division](coronavirus@udel.edu).
  - If the secrets are not correctly set, the job that is being run will fail, so make sure that they are set correctly.
