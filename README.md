@@ -60,11 +60,21 @@ This is the currently scheduled time: 8:30 UTC or 3:30 AM EST. If you would like
 in [RunHealthCheck.yaml](.github/workflows/RunHealthCheck.yaml). To understand the CRON format, look at this 
 [page](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule).
 
+#### Allowing Workflows
+Since the new repository is forked, it automatically turns workflows off. Workflows need to be on for the Health Checker
+to be run. To do this, you need to navigate to the Actions tab of the repository. On this page, there will be a message 
+saying that _Workflows aren’t being run on this forked repository_. There will also be a green button saying _I understand
+my workflows, go ahead and enable them_.
+
+![Allow Actions](resources/AllowWorkflows.PNG)
+
+You will need to click this green button, which will allow the Health Checker to run.
+
 ## Important Notes
  - As stated before, this only completes the health check and generates a green check mark. **DO NOT ABUSE THIS!** Once you
 have forked/cloned this repository, it is your responsibility to use it correctly and safely. If you know that you have 
 COVID-19, or have come in close contact with somebody that has had COVID-19, please remove the schedule line from 
 [RunHealthCheck.yaml](.github/workflows/RunHealthCheck.yaml). If you do not know how to do this, please ask somebody who does. 
-If you do not turn the scheduler off and you generate the green check, please contact the 
-[University of Delaware's COVID-19 Division](coronavirus@udel.edu).
+If you do not turn the scheduler off, and you generate the green check, please contact the 
+[University of Delaware's COVID-19 Division](mailto:coronavirus@udel.edu).
  - If the secrets are not correctly set, the job that is being run will fail, so make sure that they are set correctly.
