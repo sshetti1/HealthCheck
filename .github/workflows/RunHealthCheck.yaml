@@ -1,8 +1,7 @@
 name: Health Checker
 on:
-  push:
-    branches:
-      - nomoredriver
+  schedule:
+    - cron: '30 8 * * *'
 
 env:
   USERNAME: ${{ secrets.USERNAME }}
@@ -10,7 +9,7 @@ env:
 
 jobs:
   build:
-    name: Setup
+    name: Fill Out Health Check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
