@@ -37,6 +37,7 @@ def HealthCheck():
     # Welcome Page Next Click
     sleep(10)
     print("Entered Health Checker")  # TODO: Remove for master
+    return "Testing"
     welcomeButton = browser.find_element(By.XPATH, '//*[@id="NextButton"]')
     welcomeButton.click()
 
