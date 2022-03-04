@@ -68,7 +68,9 @@ my workflows, go ahead and enable them_.
 
 ![Allow Actions](resources/AllowWorkflows.PNG)
 
-You will need to click this green button, which will allow the Health Checker to run.
+You will need to click this green button, which will allow the Health Checker to run. After the first time that the action
+tries to run, you will also probably have to accept one more message on the actions tab to allow the action to take place
+each day.
 
 ## Important Notes
  - As stated before, this only completes the health check and generates a green check mark. **DO NOT ABUSE THIS!** Once you
