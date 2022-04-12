@@ -19,14 +19,14 @@ def HealthCheck():
 
 
     # Click Student/Employee amd ->
-    sleep(2)
+    sleep(5)
     studentEmployee = browser.find_element(By.XPATH, '//*[@id="QID32-4-label"]')
     studentEmployee.click()
     studentButton = browser.find_element(By.XPATH, '//*[@id="NextButton"]')
     studentButton.click()
 
     # Username and Password
-    sleep(2)
+    sleep(5)
     username = browser.find_element(By.XPATH, '//*[@id="udelnetid"]')
     username.send_keys(os.getenv("USERNAME"))
     password = browser.find_element(By.XPATH, '//*[@id="pword"]')
@@ -35,30 +35,30 @@ def HealthCheck():
     login.click()
 
     # Welcome Page Next Click
-    sleep(2)
+    sleep(5)
     welcomeButton = browser.find_element(By.XPATH, '//*[@id="NextButton"]')
     welcomeButton.click()
 
     # Skip Phone Number
-    sleep(2)
+    sleep(5)
     phoneButton = browser.find_element(By.XPATH, '//*[@id="NextButton"]')
     phoneButton.click()
 
     # Past 2 Weeks
-    sleep(2)
+    sleep(5)
     none2Weeks = browser.find_element(By.XPATH, '//*[@id="QID4-5-label"]')
     none2Weeks.click()
-    sleep(2)
+    sleep(5)
     weeksButton = browser.find_element(By.XPATH, '//*[@id="NextButton"]')
     weeksButton.click()
 
     # 24 Hours
-    sleep(2)
+    sleep(5)
     none24 = browser.find_element(By.XPATH, '//*[@id="QID6-5-label"]/span')
     none24.click()
     hoursButton = browser.find_element(By.XPATH, '//*[@id="NextButton"]')
     hoursButton.click()
-    sleep(2)
+    sleep(5)
 
     browser.close()
 
