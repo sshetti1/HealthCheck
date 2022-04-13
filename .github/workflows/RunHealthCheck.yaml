@@ -1,7 +1,7 @@
 name: Health Checker
 on:
   schedule:
-    - cron: '15 15 * * *'
+    - cron: '00 16 * * *'
 
 env:
   USERNAME: ${{ secrets.USERNAME }}
